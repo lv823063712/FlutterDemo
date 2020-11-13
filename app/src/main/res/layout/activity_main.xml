@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/home_yidian_fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation" />
+
+
+    <com.yinglan.alphatabs.AlphaTabsIndicator
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <com.yinglan.alphatabs.AlphaTabView
+            android:id="@+id/appointment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="6dp"
+            android:paddingBottom="4dp"
+            app:paddingTexwithIcon="5dp"
+            app:tabIconNormal="@mipmap/icon_unyue"
+            app:tabIconSelected="@mipmap/icon_yue"
+            app:tabText="预约"
+            app:tabTextSize="11sp"
+            app:textColorNormal="@color/gray_666666"
+            app:textColorSelected="@color/blue_3254E6" />
+
+        <com.yinglan.alphatabs.AlphaTabView
+            android:id="@+id/me"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="6dp"
+            android:paddingBottom="4dp"
+            app:paddingTexwithIcon="6dp"
+            app:tabIconNormal="@mipmap/icon_unwode"
+            app:tabIconSelected="@mipmap/icon_wode"
+            app:tabText="Flutter"
+            app:tabTextSize="11sp"
+            app:textColorNormal="@color/gray_666666"
+            app:textColorSelected="@color/blue_3254E6" />
+
+    </com.yinglan.alphatabs.AlphaTabsIndicator>
+</RelativeLayout>

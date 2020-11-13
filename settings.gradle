@@ -1,0 +1,11 @@
+include ':app'
+rootProject.name = "shuffling"
+
+// 加入下面配置
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+        settingsDir.parentFile,
+        'flutterest/flutterest/.android/include_flutter.groovy'
+))
+include ':flutterest'
+project(':flutterest').projectDir = new File('../flutterest/flutterest')
